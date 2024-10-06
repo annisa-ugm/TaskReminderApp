@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginTop="22dp"/>
+
+    <View
+        android:id="@+id/line_header"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        android:layout_marginTop="22dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="310dp"
+        android:layout_height="530dp"
+        android:layout_marginTop="48dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_header"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="22dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_title"
+                android:textSize="20sp"
+                android:background="@drawable/blue_rectangle"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:padding="6dp"/>
+
+            <TextView
+                android:id="@+id/txt_title_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textSize="18sp"
+                android:layout_marginTop="22dp"/>
+
+            <EditText
+                android:id="@+id/title_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/insert_title"/>
+
+            <TextView
+                android:id="@+id/txt_repeat_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repeat"
+                android:layout_marginTop="22dp"
+                android:textSize="18sp"/>
+
+            <Spinner
+                android:id="@+id/spinner_repeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/grey_rectangle"
+                android:spinnerMode="dropdown"/>
+
+            <TextView
+                android:id="@+id/txt_date_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/btn_date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/select_date"
+                app:drawableStartCompat="@drawable/baseline_calendar_today_24"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:onClick="showCalendar" />
+
+            <TextView
+                android:id="@+id/txt_time_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_time"
+                android:textSize="18sp"
+                android:textColor="@color/medium_grey"
+                android:layout_marginTop="10dp"
+                android:onClick="showTimepicker"/>
+
+            <Button
+                android:id="@+id/btn_add_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_task"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/blue"
+                android:onClick="showAlert" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
